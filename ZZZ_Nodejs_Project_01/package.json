@@ -1,0 +1,29 @@
+{
+  "name": "zzz_nodejs_project_01",
+  "description": "zzz_nodejs_project_01 description",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+	"body-parser": "^1.5.2",
+	"errorhandler": "^1.1.1",
+	"express": "^4.13.x",
+	"express-session": "^1.7.2",
+	"jade": "^1.5.0",
+	"method-override": "^2.1.2",
+	"morgan": "^1.2.2",
+	"multer": "^0.1.3",
+	"serve-favicon": "^2.0.1",
+    "express-load": "*",
+   	"mongoose": "*",
+    "express-flash": "*",
+    "cookie-parser": "*",
+    "moment": "*",
+	"cfenv": "1.0.x"
+  },
+  "engines": {
+	"node": "4.x"
+  }
+}

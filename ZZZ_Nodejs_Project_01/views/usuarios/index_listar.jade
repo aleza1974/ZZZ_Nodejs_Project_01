@@ -1,0 +1,41 @@
+extends ../layout
+
+block content
+	h1 Nodejs_Class_20 - usuarios index_listar.jade 
+	br 
+	br 
+	if messages.info
+		if messages.id
+			div(class="alert alert-info")
+				p= messages.info + " - " + messages.id
+		else
+			div(class="alert alert-info")
+				p= messages.info
+	br 
+	table(class="table well")
+		thead
+			tr
+				th	ID:
+				th	Nome:
+				th	Login:
+				th	Senha:
+				th	Data:
+				th  Ações:
+			tbody
+				each valor, i in lista
+					tr
+						td #{valor._id}
+						td #{valor.nome}
+						td #{valor.login}
+						td #{valor.senha}
+						td #{moment(valor.data_Cad).format('DD/MM/YYYY HH:MM:SS')}
+						td
+							a(href="/usuarios/editar/#{valor._id}" title="Editar", class="btn btn-danger active") Editar
+							&nbsp
+							a(href="/usuarios/visualizar/#{valor._id}" title="Visualizar", class="btn btn-success active") Visualizar
+							
+	br 
+	br 
+	a(href="/usuarios/cadastrar" title="Cadastrar", class="btn btn-danger") Cadastrar
+	a(href="/" title="Home", class="btn btn-info") Home
+	

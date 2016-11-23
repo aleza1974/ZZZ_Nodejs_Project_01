@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+	h1 Nodejs_Class_20 - usuarios visualizar.jade 
+	br 
+	form(method="POST", action="/usuarios/editar/#{value._id}", role="form")
+		input(type="hidden", name="_method", value="PUT")
+		div(class="form-group")
+			label Id:
+			p #{value._id}
+		div(class="form-group")
+			label Nome:
+			p Nome: #{value.nome}
+		div(class="form-group")
+			label Login:
+			p #{value.login}
+		div(class="form-group")
+			label Senha:
+			p #{value.senha}
+		div(class="form-group")
+			label Data Cadastro:
+			p #{value.data_Cad}
+		a(href="/usuarios" title="Voltar", class="btn btn-success") Voltar
+	br
+	form(method="POST", action="/usuarios/excluir_delete/#{value._id}", role="form")
+		input(type="hidden", name="_method", value="DELETE")
+		input(type="submit", value="Excluir", class="btn btn-danger")
+	br
+	a(href="/" title="Home", class="btn btn-info") Home
+	
+	
