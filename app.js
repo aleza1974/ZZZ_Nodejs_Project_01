@@ -4,7 +4,6 @@ console.log("### app.js ==> #001");
 //console.log("### app.js ==> INICIO ### " + DateTime.getDateTime("DD/MM/AAAA HH:MM:SS"));
 //console.log("Teste do Zanetti #101b" + utilsZZZ();
 
-
 var http 			= require('http');
 var express 		= require('express');
 var load			= require('express-load');
@@ -19,6 +18,8 @@ var bodyParser 		= require('body-parser');
 var multer 			= require('multer');
 var errorHandler 	= require('errorhandler');
 var cookie			= require('cookie-parser');
+
+var mongoDB 		= require('../mongoDB.js');
 
 var port = (process.env.PORT || process.env.VCAP_APP_PORT || 8888);
 
