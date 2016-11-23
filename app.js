@@ -24,6 +24,7 @@ var port = (process.env.PORT || process.env.VCAP_APP_PORT || 8888);
 var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
 //var mongoDB_Path	= 'mongodb://localhost/';
 var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
+var mongoDB_URL		= mongoDB_Path.toString() + mongoDB_Nome.toString();
 
 var path_public		= __dirname + '/public';
 var path_views		= __dirname +  '/views';
@@ -37,9 +38,9 @@ var appEnv = cfenv.getAppEnv();
 console.log("### app.js ==> #004");
 // ZZZ Retirado Mongoose 
  
-mongoose.connect(mongoDB_Path.toString() + mongoDB_Nome.toString(), function(err) {
-	if (err){
-		console.log("### app.js ==> #004 err");
+mongoose.connect(mongoDB_URL, function(err) {
+	if (err) {
+		console.log("### app.js ==> #004 err" + mongoDB_URL);
 		console.log('Erro ao connectar no MongoDB: ' + err)
 	}
 });
