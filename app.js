@@ -24,7 +24,8 @@ var port = (process.env.PORT || process.env.VCAP_APP_PORT || 8888);
 var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
 //var mongoDB_Path	= 'mongodb://localhost/';
 //var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
-var mongoDB_Path	= 'mongodb://ZZZDestination/';
+//var mongoDB_Path	= 'mongodb://ZZZDestination/';
+var mongoDB_Path	= 'mongodb://cap-sg-prd-5.integration.ibmcloud.com:18125/';
 var mongoDB_URL		= mongoDB_Path.toString() + mongoDB_Nome.toString();
 
 var path_public		= __dirname + '/public';
@@ -41,7 +42,7 @@ console.log("### app.js ==> #004");
  
 mongoose.connect(mongoDB_URL, function(err) {
 	if (err) {
-		console.log("### app.js ==> #004 err" + mongoDB_URL);
+		console.log("### app.js ==> #004 err " + mongoDB_URL);
 		console.log('Erro ao connectar no MongoDB: ' + err)
 		console.error("### app.js ==> #004 err" + mongoDB_URL)
 		console.error('Erro ao connectar no MongoDB: ' + err)
