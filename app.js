@@ -23,7 +23,8 @@ var port = (process.env.PORT || process.env.VCAP_APP_PORT || 8888);
 
 var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
 //var mongoDB_Path	= 'mongodb://localhost/';
-var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
+//var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
+var mongoDB_Path	= 'mongodb://ZZZDestination/';
 var mongoDB_URL		= mongoDB_Path.toString() + mongoDB_Nome.toString();
 
 var path_public		= __dirname + '/public';
