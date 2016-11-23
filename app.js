@@ -19,8 +19,6 @@ var multer 			= require('multer');
 var errorHandler 	= require('errorhandler');
 var cookie			= require('cookie-parser');
 
-var mongoDB 		= require('../mongoDB.js');
-
 var port = (process.env.PORT || process.env.VCAP_APP_PORT || 8888);
 
 var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
