@@ -42,9 +42,9 @@ console.log("### app.js ==> #004");
  
 mongoose.connect(mongoDB_URL, function(err) {
 	if (err) {
-		console.log("### app.js ==> #004 err " + mongoDB_URL);
+		console.log("### app.js ==> #004 err: " + mongoDB_URL);
 		console.log('Erro ao connectar no MongoDB: ' + err)
-		console.error("### app.js ==> #004 err" + mongoDB_URL)
+		console.error("### app.js ==> #004 err: " + mongoDB_URL)
 		console.error('Erro ao connectar no MongoDB: ' + err)
 	}
 });
