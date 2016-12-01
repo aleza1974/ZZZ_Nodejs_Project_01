@@ -4,6 +4,7 @@ console.log("### app.js ==> #001");
 //console.log("### app.js ==> INICIO ### " + DateTime.getDateTime("DD/MM/AAAA HH:MM:SS"));
 //console.log("Teste do Zanetti #101b" + utilsZZZ();
 
+
 var http 			= require('http');
 var express 		= require('express');
 var load			= require('express-load');
@@ -25,6 +26,7 @@ var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
 //var mongoDB_Path	= 'mongodb://localhost/';
 //var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
 //var mongoDB_Path	= 'mongodb://ZZZDestination/';
+
 var mongoDB_Path	= 'mongodb://cap-sg-prd-5.integration.ibmcloud.com:18125/';
 var mongoDB_URL		= mongoDB_Path.toString() + mongoDB_Nome.toString();
 
