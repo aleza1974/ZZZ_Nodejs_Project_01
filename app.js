@@ -26,17 +26,18 @@ var mongoDB_Nome	= 'ZZZ_Database';  //==> Mongoose Database (Database in SQL)
 //var mongoDB_Path	= 'mongodb://192.168.162.173:27017/';
 //var mongoDB_Path	= 'mongodb://ZZZDestination/';
 
-if (process.env.VCAP_APPLICATION) {
-	var mongoDB_Path	= process.env.VCAP_APPLICATION.URL_MONGODB;
-	console.log("### app.js ==> #002 - process.env.VCAP_APPLICATION " + process.env.VCAP_APPLICATION);
-	console.log("### app.js ==> #002 - process.env.VCAP_APPLICATION.URL_MONGODB " + process.env.VCAP_APPLICATION.URL_MONGODB);
-	console.log("### app.js ==> #002 - mongoDB_Path " + mongoDB_Path);
-}
-else
-{
-	var mongoDB_Path	= 'localhost:27017/';
-	console.log("### app.js ==> #002 - mongoDB_Path " + mongoDB_Path);
-}
+var mongoDB_Path	= 'mongodb://cap-sg-prd-5.integration.ibmcloud.com:18125/';
+//if (process.env.VCAP_APPLICATION) {
+//	var mongoDB_Path	= process.env.VCAP_APPLICATION.URL_MONGODB;
+//	console.log("### app.js ==> #002 - process.env.VCAP_APPLICATION " + process.env.VCAP_APPLICATION);
+//	console.log("### app.js ==> #002 - process.env.VCAP_APPLICATION.URL_MONGODB " + process.env.VCAP_APPLICATION.URL_MONGODB);
+//	console.log("### app.js ==> #002 - mongoDB_Path " + mongoDB_Path);
+//}
+//else
+//{
+//	var mongoDB_Path	= 'localhost:27017/';
+//	console.log("### app.js ==> #002 - mongoDB_Path " + mongoDB_Path);
+//}
 var mongoDB_URL		= mongoDB_Path.toString() + mongoDB_Nome.toString();
 
 var path_public		= __dirname + '/public';
