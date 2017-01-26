@@ -6,3 +6,10 @@ applications:
   name: zzznodejsproject01  
   host: ZZZ_Nodejs_Project_01
   disk_quota: 256M
+  services:
+  - ZZZ_Auto_Scaling
+  - ZZZ_TP_SecureGateway
+  - ZZZ_Monitoring_and_Analytics
+  - ZZZ_Mobile_Client_Access
+  - ZZZ_Single_Sign_On
+  
